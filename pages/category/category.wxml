@@ -1,0 +1,32 @@
+<!--pages/category/category.wxml-->
+<view class='container'>
+  <view class='page-body'>
+    <scroll-view scroll-y="true" height="100%">
+      <view class='con'>
+          <view class='left'>
+            <block wx:for="{{categories1}}">
+             <navigator url='../list/list?type={{item.key}}&title={{item.name}}'>
+                <view class='item item1'>
+                  <text class='board-title'>{{item.name}}</text>
+                  <image class="board-img" src="/images/arrowright.png" mode="aspectFill"/>
+                </view>
+              </navigator>
+             
+            </block>
+          </view>
+          <view class='left'>
+          <block wx:for="{{categories2}}">
+           <navigator url='../list/list?type={{item.key}}&title={{item.name}}'>
+              <view class='item item2'>
+                  <text class='board-title'>{{item.name}}</text>
+                  <image class="board-img" src="/images/arrowright.png" mode="aspectFill"/>
+              </view>
+            </navigator>
+          
+          </block>
+          </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+ 

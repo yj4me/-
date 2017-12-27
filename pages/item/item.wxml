@@ -1,0 +1,39 @@
+<!--pages/item/item.wxml-->
+<view class='container'>
+  <loading hidden="{{!loading}}">加载中...</loading>
+  <image class='background' src="{{book.images.large}}" mode='aspectFill'></image>
+  <scroll-view scroll-y="true" wx:if="{{book.title}}">
+    <view class='meta'>
+     
+      <text class="title">{{book.title}}</text>
+      <view class='con'>
+        <image class='poster' src='{{book.images.medium}}' mode='aspectFill'></image>
+        <view class='right'>
+            <text class='info'>作者：{{book.author}}</text> 
+            <text class='info'>出版社：{{book.publisher}}</text>
+            <text class='info'>出版年：{{book.pubdate}}</text> 
+            <text class='info'>定价：{{book.price}}</text>  
+            <text class='info'>装帧：{{book.binding}}</text> 
+            <text class='info'>ISBN：{{book.isbn10}}</text> 
+            <text class='info'>评分：{{book.rating.average}}</text>  
+        </view> 
+      </view>
+      <view class="summary">
+        <text class="label">内容简介：</text>
+        <view class="content">
+           <text class="{{is_ellipsis?'ellipsis':''}}">{{book.summary}}</text>
+            <image class="{{is_ellipsis?'down-img':'rotate'}}" src="/images/arrowright.png" mode="aspectFill" bindtap='expand' data-hi="is_ellipsis" />
+        </view>
+       
+      </view>
+      <view class="summary">
+        <text class="label">作者简介：</text>
+        <view class="content">
+          <text class="{{author_e?'ellipsis':''}}">{{book.author_intro}}</text>
+          <image class="down-img" src="/images/arrowright.png" mode="aspectFill" bindtap='expand' class="{{author_e?'down-img':'rotate'}}" data-hi="author_e"/>
+        </view>
+        
+      </view>
+    </view>
+  </scroll-view>
+</view>

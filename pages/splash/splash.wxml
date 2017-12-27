@@ -1,0 +1,13 @@
+<!--pages/splash/splash.wxml-->
+<swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}'>
+
+  <block wx:for="{{books}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item.cover.url}}" class='slide-image' mode='aspectFill'></image>
+      <!--绑定按压事件  -->
+      <button class='btn' bindtap="start" wx:if="{{index == books.length-1}}">立即体验         </button>
+    </swiper-item>
+  </block>
+  
+</swiper>
+

@@ -1,0 +1,34 @@
+<!--pages/list/list.wxml-->
+<view class='container'>
+  <loading hidden="{{!loading}}">加载中...</loading>
+  <view class="page-header">
+    <text class="page-header-text">{{subtitle}}</text>
+  </view>
+
+  <!--绑定滚动到底部事件  -->
+  <scroll-view scroll-y="true" class="page-body" bindscrolltolower="loadMore">
+    <block wx:for="{{books}}">
+      <navigator url="../item/item?id={{item.id}}">
+            <view class="item">
+              <image class="poster" src="{{item.cover.url}}"></image>
+              <view class="meta">
+                <text class="title">{{item.title}}</text>
+                <text class="sub-title">{{item.info}}</text>
+                <view class="sub-title">
+                  <text class='rating'>{{item.rating.value}}</text>
+                  <text> ({{item.rating.count}}人评价)</text>
+                </view>
+              </view>
+            </view>
+      </navigator>
+    </block>
+    <view class="tips">
+      <view wx:if="{{hasMore}}">
+        <image src="/images/loading.gif" mode="aspectFill"/><text>努力加载中...</text>
+      </view>
+      <view wx:else><text>没有更多内容了</text></view>
+    </view>
+  </scroll-view>
+  
+</view>
+

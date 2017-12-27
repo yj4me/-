@@ -1,0 +1,38 @@
+/* pages/home/home.wxss */
+swiper{
+  height: 400rpx;
+  width: 100%;
+}
+swiper image{
+  height: 100%; 
+  width: 100%;
+}
+.page-body{
+   padding: 40rpx 20rpx;
+}
+.title {
+  display: block;
+  font-size: 42rpx;
+  margin-bottom: 20rpx;
+}
+.finds{
+  display: flex;
+  flex-direction: row;
+  /*换行  */
+  flex-wrap: wrap;
+}
+.description {
+  display: block;
+  font-size: 28rpx;
+  padding: 20rpx 30rpx;
+  color:#000;
+  border: 1px solid red; 
+  border-radius: 14rpx;
+  /*文本不换行  */
+  white-space: nowrap;
+  margin:0 20rpx 20rpx 0;
+
+/*点击高亮  */
+  cursor: pointer;
+}
+

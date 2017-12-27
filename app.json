@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/splash/splash",
+    "pages/home/home",
+    "pages/category/category",
+    "pages/list/list",
+    "pages/item/item",
+    
+    "pages/my/my"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#35495e",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "豆瓣读书",
+    "backgroundColor": "#000000",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#35495e",
+    "borderStyle": "white",
+    "backgroundColor": "#f9f9f9",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-actived.png"
+      },
+      {
+        "text": "分类",
+        "pagePath": "pages/category/category",
+        "iconPath": "images/nav_sort.png",
+        "selectedIconPath": "images/nav_sort_on.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-actived.png"
+      }
+    ]
+  }
+}
