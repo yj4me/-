@@ -9,3 +9,4 @@
 <br>  
 #### 项目预览：<br> 
  ![image](https://github.com/yj4me/-/blob/master/screenshot/show.gif)
+  ![image](https://github.com/yj4me/-/blob/master/screenshot/tags.gif)
