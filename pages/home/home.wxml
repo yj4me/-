@@ -20,7 +20,8 @@
 
       <block wx:for="{{finds}}" wx:key="index" >
       <navigator url="../item/item?id={{item.id}}" hover-class='none'>
-        <text class='description'  style='color:{{colorArr[index]}};border:1px solid {{colorArr[index]}};' >{{item.name}}</text>
+        <!--根据索引从随机颜色数组中取值  -->
+        <text class='description'  style='color:{{randomColor[index]}};border:1px solid {{randomColor[index]}};' >{{item.name}}</text>
       </navigator>
       </block>
       

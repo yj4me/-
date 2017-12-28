@@ -43,18 +43,35 @@ Page({
         name: "罗马人的故事2"
       }
     ],
-    colorArr: ["#40a851", "#ca3547", "#fdab3e", "#fc4359", "#2b86e5","#000", "#40a851"]
+    colorArr: ["#40a851", "#000", "#ca3547", "#2b86e5","#fdab3e", "#fc4359", "#2b86e5","#000", "#40a851"],
+    // 随机颜色数组
+    randomColor:[]
     
   },
-  randomColor(arr){
-    return Math.floor(Math.random()*arr.length);
-  },
+  
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    // 初始化
+    var that = this;
+    // 必须经过第三方变量接收才能使用
+    var len = this.data.colorArr.length;
+    var arr = this.data.colorArr;
+    var newArr = [];
+    // 不能只执行一次，要在数据数组循环遍历的时候执行多次(arr.length次)
+    while (len>0){
+      // 获取随机颜色
+      var random = arr[Math.floor(Math.random() * len)];
+      newArr.push(random);
+      len--;
+    }
+      // 将随机颜色数组赋值给randomColor
+      that.setData({ randomColor: newArr });
+  
+   
+
     douban.find('book_fiction','jsonp1', 1, 5)
       .then(d => this.setData({ books: d.subject_collection_items, loading: false}))
       .catch(e => {
