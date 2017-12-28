@@ -1,4 +1,4 @@
-# -
+#### doubanReader
 微信小程序（用的豆瓣读书的数据接口），项目参考：https://github.com/zce/weapp-demo（豆瓣电影）
 ---
 #### 功能模块：<br>  
